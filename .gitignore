@@ -1,0 +1,19 @@
+# .gitignore
+
+# Environnement virtuel
+.venv/
+env/
+
+# Fichiers temporaires
+*.pyc
+__pycache__/
+.DS_Store
+
+# Données (exemple)
+data/
+*.csv
+*.json
+
+# Logs et sauvegardes
+*.log
+*.bak
