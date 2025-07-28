@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot IA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-gray-100 p-8">
+
+  <div class="max-w-xl mx-auto bg-white shadow-md rounded p-6">
+    <h1 class="text-2xl font-bold mb-4 text-center">🤖 Mon chatbot IA</h1>
+<form method="POST" action="/get">
+      <input type="text" name="message" placeholder="Pose ta question ici..." required class="border p-2 w-full mb-4">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Envoyer</button>
+    </form>
+    {% if bot_response %}
+      <div class="mt-4 p-4 bg-gray-50 rounded border">
+        <p><strong>Toi :</strong> {{ user_input }}</p>
+       <p><strong>Langue :</strong> {{ bot_response.langue }}</p>
+      <p><strong>Bot :</strong> {{ bot_response.reponse }}</p>
+
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
